@@ -1,77 +1,123 @@
+🏡 HouseMatch
+HouseMatch is a smart, scalable real estate matching iOS application built with SwiftUI, powered by a Vapor backend, and integrated with a FastAPI-based machine learning model. It allows users to discover personalized housing recommendations based on location, preferences, and behavior using a real-time recommendation system.
 
-# sd-tiks
+🚀 Tech Stack
+Frontend: SwiftUI (iOS)
 
+Backend: Vapor (Swift), SQLite (Prototype), Firebase
 
-## January Goals
-- Create a basaic login page to integrate then branch off of it 
-- Frontend integrates with database
-- HostBackend on AWS Server 
-- backend integrates with machine learning
-- backed interates with frontend
-- Machine learning (Document Journey) 
-  - Encode and include details data in the machine lerning model
-- User able to sign up and log in
-- Preferences saved to database
-- Properties can be pulled from API
-- Properties will be stored in database
-## February Goals
-- Improve machine learning accuracy
-- - Backend integrates with database
-## March Goals
-- 
-## April Goals
--
+Machine Learning API: FastAPI (Python)
 
+Geolocation: Google Maps API, RapidAPI Realtor Search
 
+Database: Firebase Realtime Database, SQLite (for prototyping)
 
-Frontend - Kweku:
+Deployment: AWS (Backend hosting)
 
-In our project, I was responsible for designing and developing the front end, which plays a crucial role in ensuring the application is user-friendly, supports seamless navigation, and integrates effectively with the backend functionality. My focus was on creating an intuitive and engaging interface to enhance the overall user experience.
+🎯 Core Features
+✅ User Account System
+Secure authentication (signup, login, logout)
 
-Key Features of the Front End:
+Password recovery
 
-1. User Account Management:
-    * Implemented functionality for user registration and authentication, enabling seamless sign-up and login processes.
-2. Interactive Swipe Mechanism:
-    * Developed a swipe feature, allowing users to swipe left or right. This interaction helps gather insights into user preferences, which inform predictions and recommendations tailored to individual interests.
-3. Personalized Housing/Rental Preferences:
-    * Enabled users to set specific housing and rental preferences based on the available options, ensuring that they can easily find properties matching their criteria.
+Session validation middleware
 
+✅ Housing Discovery & Recommendations
+Swipe-based interface for preference gathering
 
-Data Flow - Syl:
+Personalized property matching using ML model
 
-Key Features of the Data Flow:
-1. Initialization: Set up Firebase tables to store user data and preferences.
-2. Class Definition: Create classes to represent database entities, such as users and preferences.
-3. API Integration: Connect to the necessary API to retrieve property data.
-4. User Addition:
-    * Add the new user to the database.
-    * Store the user's preferences along with their profile information.
+Real-time property listings pulled from external APIs
 
+✅ Machine Learning Integration
+Content-based filtering model
 
-Machine Learning- Treasure:
+Recommends homes based on user preferences (e.g., price, size)
 
-1. Machine Learning: Implemented a basic recommendation system using a content based model where the list of houses are filtered and recommended to users based on their preferences such as price and square foot and also based on their liked houses
-2. MapUI: Implemented Implement a map ui that will be used for the geolocation implementation by Issouf. The user will have the opportunity to  look for housing recommendations within a particular area
+Refined using user feedback (likes/dislikes)
 
+✅ Geolocation Services
+Interactive map UI
 
-Backend - Issouf:
-1. User Authentication System:
-    * Implemented a secure authentication module to manage user access, including functionalities such as user registration, login, password recovery, and logout.
-    * Utilized industry-standard security practices to ensure data protection and session management.
-    * Designed scalable middleware to validate user requests
-2. Retrieval of Property Listings from API:
-    * Established a reliable connection with external APIs 
-    * Integrated mechanisms for parsing, validating, and storing the API responses 
-    * Implemented error-handling procedures
-    * Enabled search or filtering capabilities on the backend
-    * Implemented in with prototype sqlitedb
-3. Geolocation Integration:
-    * Integrated geolocation services to enhance the user experience 
-    * Leveraged Google Maps Api tools
-    * RapidApi Realtor Search provides location which could take in location and display nearby properties
-    * Integration with Treasure’s initial mapUI
-  
+Find listings based on current or selected location
 
-These developments form the backbone of a scalable , real-time information retrieval, and seamless integration of location-based features. This work has enabled a infrastructure for handling user interactions, property data, and geolocation insights. Testing initially for high concurrency and scalability.
-# HouseMatch
+Google Maps and RapidAPI integration for property suggestions
+
+🗂 Architecture Overview
+🔧 Backend – Issouf
+Built RESTful APIs in Vapor
+
+Integrated with external property listing APIs
+
+Designed SQLite database prototype
+
+Added geolocation-based filtering
+
+Built error-handling and data validation layers
+
+🎨 Frontend – Kweku
+SwiftUI-based UI with a clean, responsive design
+
+Built swipe card interaction to capture preferences
+
+Integrated authentication flow
+
+Preference setting and session management
+
+🔁 Data Flow – Syl
+Modeled and created Firebase tables for users and preferences
+
+Managed backend-to-database integrations
+
+Synced APIs and stored housing data with user filters
+
+🤖 Machine Learning – Treasure
+Developed FastAPI service with content-based recommendation engine
+
+Ranked properties by user-defined filters + interaction data
+
+Connected to iOS frontend via REST endpoint
+
+Developed foundational Map UI for geolocation visualizations
+
+📆 Development Timeline
+✅ January
+Implemented core authentication
+
+Connected frontend to Firebase
+
+Setup backend on AWS
+
+Initial ML integration
+
+Property API pulling and preference saving
+
+✅ February
+Improved ML accuracy and filtering
+
+Backend ↔️ database synchronization
+
+✅ March–April
+Geolocation + map integration
+
+Real-time property browsing
+
+UI refinements and backend scalability testing
+
+📌 Future Improvements
+Multi-language support
+
+Smart clustering on maps
+
+Integration with landlord/agent portals
+
+Real-time chat between users and property providers
+
+🤝 Credits
+Issouf Diarrassouba – Backend (Vapor, API integration, Geolocation)
+
+Kweku – Frontend (SwiftUI)
+
+Syl – Data modeling, Firebase integration
+
+Treasure – ML model, FastAPI service, Map UI
